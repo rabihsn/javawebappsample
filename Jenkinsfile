@@ -22,7 +22,7 @@ node {
       def resourceGroup = 'gr-rabi'
       def webAppName = 'webapprabi2'
       // login Azure
-      withCredentials([usernamePassword(credentialsId: 'AzureServicePrincipal', passwordVariable: 'R_EFN82&1!', usernameVariable: 'rabi.shah@m2iFormation1.onmicrosoft.com')]) {
+      withCredentials([usernamePassword(credentialsId: 'AzureServicePrincipal', passwordVariable: 'Password123', usernameVariable: 'appid')]) {
        sh '''
           az login --service-principal -u 'rabi.shah@m2iFormation1.onmicrosoft.com' -p 'R_EFN82&1!' -t $AZURE_TENANT_ID
           az account set -s $AZURE_SUBSCRIPTION_ID
